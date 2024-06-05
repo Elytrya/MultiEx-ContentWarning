@@ -34,7 +34,7 @@ namespace MultiEx.Patches
             if (maxOxygenField != null)
             {
                 // Устанавливаем значение remainingOxygen на 0f
-                AccessTools.Field(typeof(PlayerController), "maxStamina").SetValue(__instance, 10000f);
+                AccessTools.Field(typeof(PlayerController), "maxStamina").SetValue(__instance, 999999999999999f);
                 AccessTools.Field(typeof(PlayerController), "jumpImpulse").SetValue(__instance, 0f);
                 AccessTools.Field(typeof(PlayerController), "sprintMultiplier").SetValue(__instance, 4f);
             }
