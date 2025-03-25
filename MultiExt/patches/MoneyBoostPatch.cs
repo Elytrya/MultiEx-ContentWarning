@@ -10,14 +10,12 @@ namespace MultiEx.Patches
     {
         public static MethodBase TargetMethod()
         {
-            // Get all methods in the BigNumbers class and log them
             MethodInfo[] methods = typeof(BigNumbers).GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             foreach (var method in methods)
             {
                 Debug.Log($"Found method: {method.Name}");
             }
 
-            // Attempt to find a method that might be suitable
             MethodBase methodToPatch = null;
 
             foreach (var method in methods)
